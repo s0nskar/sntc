@@ -1,0 +1,128 @@
+@font-face{
+	src:url(fonts/Lato-Regular.ttf);
+	font-family: "lato";
+}
+
+body{
+	font-family: "lato";
+	background:#fdf7ef;
+}
+
+.navbar-fixed-top{
+  /*height: 1.4em;*/
+  background: #8E1B1B;
+  
+}
+
+.navbar-fixed-top li a{
+  color: rgb(255, 255, 255);
+}
+
+.ontop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right:0;
+  z-index: 99999;
+  pointer-events:none;
+  color: rgb(255, 255, 255);
+  background: rgba(0,0,0,0.7);
+}
+
+.mid{
+  text-align: center;
+  margin-top: 23%;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.mid h1{
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.circle {
+margin-left: auto;
+margin-right: auto;
+border-radius: 50%;
+width: 100%;
+position: relative;
+}
+
+.circle-border {
+border: 1px solid black;
+}
+
+.circle-solid{
+background-color: #8E1B1B;
+}
+
+.circle:before {
+content: "";
+display: block;
+padding-top: 100%;
+}
+
+.circle-inner {
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+text-align: center;
+}
+
+.score-text {
+margin: auto;
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+height: 1.5em;
+line-height: 1.5em;
+font-size: 1.5em;
+}
+
+.circle-outer{
+	width: 200px;
+}
+
+.push{
+	left: 0;
+}
+
+button.circle{
+	/*background: url(images/green_circle.png);*/
+	background-position: 25%;
+	border: none;
+	color: rgb(255, 255, 255)
+}
+
+p.score-text {
+	font-size: 0.4em;
+}
+
+
+.club_wrapper{
+	text-align: center;
+}
+
+.club_wrapper h4 {
+  opacity: 0.5;
+	font-weight: bold;
+	color: #8E1B1B;
+}
+
+@media (min-width:  1000px) {
+	.push{
+		left: 12.5%;
+	}
+}
+
+.img-wrapper{
+  border-radius: 50%;
+  overflow:hidden;
+  width: 140px;
+}
