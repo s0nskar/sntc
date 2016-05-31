@@ -1,41 +1,41 @@
 #amc>.circle-outer{
-	background-image: url(../images/aero_1.jpg);
+	background-image: url(images/aero_1.jpg);
 	background-position: 25%;
 	background-size: 150%;
 }
 
 #astro>.circle-outer{
-	background-image: url(../images/astro_1.jpg);
+	background-image: url(images/astro_1.jpg);
 	background-position: 25%;
 	background-size: 150%;
 }
 
 #cops>.circle-outer{
-	background-image: url(../images/cops_1.jpg);
+	background-image: url(images/cops_1.jpg);
 	background-position: 25%;
 	background-size: 150%;
 }
 
 #green>.circle-outer{
-	background-image: url(../images/green_4.jpg);
+	background-image: url(images/green_4.jpg);
 	background-position: 25%;
 	background-size: 150%;
 }
 
 #out>.circle-outer{
-	background-image: url(../images/green_3.jpg);
+	background-image: url(images/green_3.jpg);
 	background-position: 25%;
 	background-size: 150%;
 }
 
 #robo>.circle-outer{
-	background-image: url(../images/robo_1.jpg);
+	background-image: url(images/robo_1.jpg);
 	background-position: 25%;
 	background-size: 150%;
 }
 
 #sae>.circle-outer{
-	background-image: url(../images/sae_1.jpg);
+	background-image: url(images/sae_1.jpg);
 	background-position: 80%;
 	background-size: 150%;
 }
