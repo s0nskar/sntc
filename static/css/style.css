@@ -1,10 +1,12 @@
 @font-face{
 	src:url(fonts/Lato-Regular.ttf);
-	font-family: "lato";
+	font-family: "Lato";
 }
 
+/*@import url(https://fonts.googleapis.com/css?family=Lato);*/
+
 body{
-	font-family: "lato";
+	font-family: "Lato";
 	background:#fdf7ef;
   text-align: justify;
 }
@@ -13,6 +15,23 @@ body{
   /*height: 1.4em;*/
   background: #8E1B1B;
   
+}
+.navbar-nav .open .dropdown-menu>li>a,
+.navbar-nav>.open>a{
+  color: white !important;
+  background-color: transparent !important;
+}
+
+.navbar-toggle .icon-bar{
+  background-color: white !important;
+}
+
+.navbar-toggle:hover>.icon-bar{
+  background-color: #8E1B1B !important;
+}
+
+.navbar-toggle:hover{
+  background-color: white !important;
 }
 
 .navbar-fixed-top li a{
@@ -125,4 +144,9 @@ p.score-text {
   border-radius: 50%;
   overflow:hidden;
   width: 140px;
+}
+
+ul.dropdown-menu{
+  background:#8E1B1B;
+  color: white;
 }
