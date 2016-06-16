@@ -163,3 +163,16 @@ ul.dropdown-menu{
   background: #8E1B1B;
   color: #DFCE06;
 }
+
+@media (max-width: 767px){
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+    color: white;
+  }
+  .mid>h1{
+    font-size: 2em;
+  }
+  .mid{
+    font-size: 1.6em;
+    margin-top: 45%;
+  }
+}
