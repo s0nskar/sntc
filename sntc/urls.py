@@ -7,12 +7,6 @@ from website import views as web_views
 
 urlpatterns = [
     url(r'^$', web_views.home, name='home'),
-    url(r'^amc/$', web_views.amc, name='amc'),
-    url(r'^astro/$', web_views.astro, name='astro'),
-    url(r'^cops/$', web_views.cops, name='cops'),
-    url(r'^green/$', web_views.green, name='green'),
-    url(r'^out/$', web_views.out, name='out'),
-    url(r'^robo/$', web_views.robo, name='robo'),
     url(r'^(?P<slug>[\w\-]+)/$', web_views.club, name='club'),
 
     url(r'^admin/', include(admin.site.urls)),
