@@ -244,19 +244,18 @@
     <div class="container">
       <div style="widths"></div>
       <h2 class="featurette-heading" style="text-align: center;">Clubs</h2><br>
-      <div class="row">
-        {% for club in clubs %}
-        <a href="{{club.slug}}">
-          <div class="col-md-3 club_wrapper" id="{{club.slug}}">
-            <div class="circle circle-solid circle-outer">
-              <div class="circle-inner">
-                <div class="score-text"></div>
-             </div>
+      {% for club in clubs %}
+          <a href="{{club.slug}}">
+            <div class="col-md-3 club_wrapper" id="{{club.slug}}">
+              <div class="circle circle-solid circle-outer">
+                <div class="circle-inner">
+                  <div class="score-text"></div>
+               </div>
+              </div>
+              <h4><strong>{{club.name}}</strong></h4>
             </div>
-            <h4><strong>{{club.name}}</strong></h4>
-          </div>
-        </a>
-        {% endfor %}
+          </a>
+      {% endfor %}
 
     <!-- club circles end -->
 
