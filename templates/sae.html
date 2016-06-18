@@ -12,7 +12,7 @@
     <!-- Custom styles for this template -->
     <link href="/static/css/carousel.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -64,13 +64,13 @@
       <div class="outer">
         <div class="ontop">
           <div class="mid">
-            <h1>Society of Automotive Engineers<br> Collegiate Club</h1>
+            <h1>{{club.name | safe}}</h1>
             <!-- <div id="bar">
                 (optional text)
             </div> -->
           </div>
         </div>
-      
+
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
@@ -156,142 +156,41 @@
     </div>
     <!-- carousel ends -->
 
-    
+
 
 
 
     <!-- intro starts -->
     <div class="container marketing">
+
+      {% for topic in topics %}
       <div class="row featurette">
         <div class="col-md-8 col-md-push-2">
-          <h2 class="featurette-heading">About Us</h2>
-          <p class="lead">Society of Automotive Engineers, IIT BHU, a collegiate chapter of SAE INDIA was established in year 2009. Registered to SAE international, it is a platform where students sharing a vehement passion for automobiles sciences involve themselves in various projects. It was established under the patronage of our Late Prof. B.B. Bansal, under the banner of Department of Mechanical Engineering, IIT BHU. The SAE collegiate Club promotes automotive activities in the institutes and has dedicated teams not only for operating club activities but also for participating in SAE BAJA, SAE EFFICYCLE. As has been corroborated in the previous years, students have been working as a strong team with great efforts not only on amassing knowledge and experience in technical field of design and manufacturing, but also in financial and administrative domains.</p>
+          <h2 class="featurette-heading">{{topic.heading}}</h2>
+          <p class="lead">{{topic.about | safe}}</p>
         </div>
-        
+
       </div>
-
-      
-
       <hr class="featurette-divider">
+      {% endfor %}
 
-
-	<div class="row featurette">
-        <div class="col-md-8 col-md-push-2">
-          <h2 class="featurette-heading">Vision</h2>
-          <p class="lead">Our vision is to bring together students from all segments of engineering, to a common platform, for the purpose of learning and understanding the basics of automobiles and automobile industry. Our aim is to set up an atmosphere for promotion of technical skills by providing industrial experience. Enhancement of practical knowledge through projects relating to real life examples would be our primary focus.</p><p class="lead">We would be organizing highly interactive sessions with professionals from this fieldby collaborating with various committees and renowned industries. Our goal will be to enhance formal education and professional development. Also, we will be conducting various career enhancement sessions.</p>
-        </div>
-        
-	</div>
-
-     
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-8 col-md-push-2">
-          <h2 class="featurette-heading">Achievements</h2>
-          <ul class="lead">
-            <li>Secured 11th Rank in SAE EFFI CYCLE</li>
-            <li>Secured 13th  position among 400 teams in Virtual Baja</li>
-            <li>Only IIT to qualify for final round of Baja 2014</li>
-            <li>Secured 35th Rank in SAE-NIS EFFICYCLE 2015</li>
-            
-
-
-          </ul>
-        </div>
-	</div>
-
-  <div class="row featurette">
-    <div class="col-md-8 col-md-push-2">
-      <h2 class="featurette-heading">Project</h2>
-      <ul class="lead">
-        <li>
-          <p class="lead">Adsorbtion Cooling System powered by waste heat from Internal Combustion Engines. </p>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-	<div class="row featurette">
-        <div class="col-md-8 col-md-push-2">
-          <h2 class="featurette-heading">Activities</h2>
-          <ul class="lead">
-            <li><p class="lead"><strong> BAJA </strong>- SAE is an inter-collegiate event hosted by theAutomotive Engineers (SAE) at national level. The students would function as a team to design, build, test, promote and compete with an all terrain vehicle within the limits of the rules.</p><p class="lead">The competition is organized in two stages, the first stage being the Virtual Baja Competition held in July ever year. This phase of the competition consists of designing the vehicle testing it in real world by simulating those conditions on SAE approved CAD and Simulation software. This design has to be presented to a jury panel, where the design is judged on various parameters viz. Economy of design; it’s response to various impacts and stresses; material, etc. The second phase consists of the race that takes place in January, where the manufactured vehicle has to undergo various tests like acceleration test, hill climb test, braking test, maneuverability test, endurance test. </p>
-            </li>
-            <li><p class="lead"><strong>EFFICYCLE</strong>- It is a design competition in whichengineering students are given a stimulating task of designing, simulating and fabricating human powered + Electric motor  The objective of this event is to encourage people to use green vehicles and at the same time provide a platform for engineering students to tackle problems of the real world with their technical knowledge.</p></li>
-            <li><p class="lead">Workshops and quizzes are organized on a regular basis with the aim ofintroducing the key aspects of automobile engineering , detailed information  about parts and functioning of a automobile and simulation softwares.</p></li>
-            <li><p class="lead"><strong>POTENTIO-</strong>A Pre- Technex event focusing more on basic kinematics andrigid body mechanics. The task is basically to brush up old physics concepts and use it to make a Mechanical Bot that plays Basketball.</p></li>
-            <li><p class="lead"><strong>AXELERATE</strong>-An IC-RC car Racing event on off-road dirt track withobstacles, held in TECHNEX every year. This competition involves fabricating a 1:8 RC car with 4.5cc engine which runs on Nitro-methane fuel.</p></li>
-            
-          </ul>
-        </div>
-        
-	</div>
-
-
-	
-      <!-- <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-8 col-md-push-2">
-          <h2 class="featurette-heading">Automobile (SAE) Club</h2>
-          <p class="lead">Does your heart skip a beat when a Mercedes or an Audi zooms past you? Do you also want to design racing cars and luxury automobiles some day? You’ve come to the right place then. This club teaches you to make remote controlled internal combustion engine cars, which run on nitro fuel (yes, it actually has a miniature internal combustion engine). Apart from that, we also participate in SAE-BAJA efficycle events, and we have also designed a car that holds the record for the best mileage ever.</p>
-        </div>
-        
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-8 col-md-push-2">
-          <h2 class="featurette-heading">Club of Programmers (COPS)</h2>
-          <p class="lead">There are 10 kinds of people in this world: Those who know binary and those who don’t. If coding is your passion, then this is the club for you. We organize contests on HackerRank all year round, and there are lots of prizes and certificates to be won.</p>
-        </div>
-        
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-8 col-md-push-2">
-          <h2 class="featurette-heading">Green Club</h2>
-          <p class="lead">We human beings take away a lot of things from nature, but how much do we give back to it? The basic idea for the Green Club stems from this. If you always had had a green thumb, now is the place to flaunt it. We have organized massive campaigns like the Paper Bag Campaign for Technex ’15, and we do our best to try and make our college a greener place.</p>
-        </div>
-        
-      </div> -->
     </div>
 
     <!-- intro ends -->
-    
-    <hr class="featurette-divider">
 
     <!-- heads start -->
     <div class="container marketing">
       <div class="row">
+        {% for secy in secys %}
         <div class="col-lg-4  col-lg-push-1">
           <img class="img-circle" src="/static/css/images/green_circle.jpg" alt="Generic placeholder image" width="140" height="auto">
-          <h2>Kunal Rawat</h2>
-          <h4>Secretary</h4>
-          <p>kunal.rawat.mec14@itbhu.ac.in</p>
-          <p>+91-8090972428</p>
+          <h2>{{secy.name}}</h2>
+          <h4>{{secy.post}}</h4>
+          <p>{{secy.email}}</p>
+          <p>{{secy.contact}}</p>
           <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" src="/static/css/images/green_circle.jpg" alt="Generic placeholder image" width="140" height="auto">
-          <h2>Vivek Kr. Saini</h2>
-          <h4>Joint Secretary</h4>
-          <p>vivekkr.saini.mec14@itbhu.ac.in</p>
-          <p>+91-8881225477</p>
-          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4 col-lg-pull-1">
-          <img class="img-circle" src="/static/css/images/green_circle.jpg" alt="Generic placeholder image" width="140" height="auto">
-          <h2>Shubhi Srivastava</h2>
-          <h4>Joint Secretary</h4>
-          <p>shubhi.srivastava.civ15@itbhu.ac.in</p>
-          <p>+917270873782</p>
-          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
-        </div><!-- /.col-lg-4 -->
+        {% endfor %}
       </div><!-- /.row -->
 
     </div>

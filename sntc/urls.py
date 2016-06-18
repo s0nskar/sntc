@@ -13,8 +13,7 @@ urlpatterns = [
     url(r'^green/$', web_views.green, name='green'),
     url(r'^out/$', web_views.out, name='out'),
     url(r'^robo/$', web_views.robo, name='robo'),
-    url(r'^sae/$', web_views.sae, name='sae'),
-    url(r'^user/$', web_views.user, name='user'),
+    url(r'^(?P<slug>[\w\-]+)/$', web_views.club, name='club'),
 
     url(r'^admin/', include(admin.site.urls)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -13,7 +13,7 @@
     <link href="/static/css/carousel.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
     <link rel="stylesheet" type="text/css" href="/static/css/clubs.css">
-    
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -67,7 +67,7 @@
             <h1>Science and Technology<br> Council</h1>
           </div>
         </div>
-      
+
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
@@ -88,73 +88,73 @@
             <div class="item active">
               <img class="first-slide" src="/static/css/images/robo_1.jpg" alt="First slide">
               <div class="container">
-                
+
               </div>
             </div>
             <div class="item">
               <img class="second-slide" src="/static/css/images/astro_2.jpg" alt="Second slide">
               <div class="container">
-                
+
               </div>
             </div>
             <div class="item">
               <img class="third-slide" src="/static/css/images/robo_2.jpg" alt="Third slide">
               <div class="container">
-                
+
               </div>
             </div>
             <div class="item">
               <img class="third-slide" src="/static/css/images/aero_2.jpg" alt="Third slide">
               <div class="container">
-                
+
               </div>
             </div>
             <div class="item">
               <img class="third-slide" src="/static/css/images/sae_1.jpg" alt="Third slide">
               <div class="container">
-                
+
               </div>
             </div>
             <div class="item">
               <img class="third-slide" src="/static/css/images/cops_1.jpg" alt="Third slide">
               <div class="container">
-                
+
               </div>
             </div>
             <div class="item">
               <img class="third-slide" src="/static/css/images/astro_1.jpg" alt="Third slide">
               <div class="container">
-                
+
               </div>
             </div>
             <div class="item">
               <img class="third-slide" src="/static/css/images/green.jpg" alt="Third slide">
               <div class="container">
-                
+
               </div>
             </div>
             <div class="item">
               <img class="third-slide" src="/static/css/images/aero_7.jpg" alt="Third slide">
               <div class="container">
-                
+
               </div>
             </div>
             <div class="item">
               <img class="third-slide" src="/static/css/images/sae_6.jpg" alt="Third slide">
               <div class="container">
-                
+
               </div>
             </div>
             <div class="item">
               <img class="third-slide" src="/static/css/images/aero_5.jpg" alt="Third slide">
               <div class="container">
-                
+
               </div>
             </div>
             <div class="item">
               <img class="third-slide" src="/static/css/images/green_4.jpg" alt="Third slide">
               <div class="container">
-                
+
               </div>
             </div>
 
@@ -172,7 +172,7 @@
     </div>
     <!-- carousel ends -->
 
-    
+
 
 
 
@@ -183,13 +183,13 @@
           <h2 class="featurette-heading">About Us</h2>
           <p class="lead">Welcome to the homepage of the Science and Technology Council, IIT (BHU) Varanasi! This is the place where all your innovative ideas, which were trapped in the quagmire of pen and paper, are given shape and transformed into reality. Our council houses a plethora of clubs, which are extremely adept at their job. From making robots that battle it out amongst themselves in an arena to making racing cars, we do it all. Read on about our clubs to find out more!</p>
         </div>
-        
+
       </div>
  <div class="row featurette">
         <div class="col-md-8 col-md-push-2">
           <h2 class="featurette-heading"><a href="hhtp://technex.in">Technex</a></h2>
           <p class="lead">Every year the Science and Technology Council organises the Techno-Management Fest of IIT (BHU), Varanasi,known far and wide as Technex.<br>The 2016 edition would mark the 77<small>th</small> iteration of the fest.</p>
-        </div> 
+        </div>
       </div>
 
 <div class="row featurette">
@@ -197,7 +197,7 @@
           <h2 class="featurette-heading">Vision Director</h2>
           <p class="lead">Bla Bla Bla by director</p>
         </div>
-        
+
       </div>
 
       <div class="row featurette">
@@ -205,7 +205,7 @@
           <h2 class="featurette-heading">Vision Dosa</h2>
           <p class="lead">Dosa ji ke Vichar</p>
         </div>
-        
+
       </div>
 
       <div class="row featurette">
@@ -213,14 +213,14 @@
           <h2 class="featurette-heading">Vision council</h2>
           <p class="lead">Some more vichars</p>
         </div>
-        
+
       </div>
       <div class="row featurette">
         <div class="col-md-8 col-md-push-2">
           <h2 class="featurette-heading">Vision GenSec</h2>
           <p class="lead">Vision here</p>
         </div>
-        
+
       </div>
 
       <hr class="featurette-divider">
@@ -236,26 +236,27 @@
           	<li>Achievement 5</li>
           </ul>
         </div>
-        
+
       </div>
 <div class="row featurette">
-    
+
     <!-- club circles start -->
     <div class="container">
       <div style="widths"></div>
       <h2 class="featurette-heading" style="text-align: center;">Clubs</h2><br>
       <div class="row">
-        <a href="amc">
-          <div class="col-md-3 club_wrapper" id="amc">
+        {% for club in clubs %}
+        <a href="{{club.slug}}">
+          <div class="col-md-3 club_wrapper" id="{{club.slug}}">
             <div class="circle circle-solid circle-outer">
               <div class="circle-inner">
                 <div class="score-text"></div>
              </div>
             </div>
-            <h4><strong>Aero-Modelling Club</strong></h4>
+            <h4><strong>{{club.name}}</strong></h4>
           </div>
         </a>
-          
+        {% endfor %}
 
         <a href="astro">
           <div class="col-md-3 club_wrapper" id="astro">
@@ -289,9 +290,9 @@
             <h4><strong>Green Club</strong></h4>
           </div>
         </a>
-        
+
       </div>
-      
+
       <div class="row">
         <a href="robo">
           <div class="col-md-3 club_wrapper"  id="robo">
@@ -340,7 +341,7 @@
     </div>
 
     <!-- club circles end -->
-    
+
     <hr class="featurette-divider">
 
     <!-- heads start -->
