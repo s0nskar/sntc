@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.contrib.auth.models import User
+from django.http import HttpResponse
 
 def home(request):
 	return render(request, 'index.html', {})
@@ -23,3 +25,7 @@ def robo(request):
 
 def sae(request):
 	return render(request, 'sae.html', {})
+
+def user(request):
+	 User.objects.create_superuser('admin', 'admin@example.com', 'iamadmin')
+	 return HttpResponse("Done")
