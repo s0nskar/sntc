@@ -6,8 +6,8 @@ from django.conf import settings
 from website import views as web_views
 
 urlpatterns = [
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^$', web_views.home, name='home'),
     url(r'^(?P<slug>[\w\-]+)/$', web_views.club, name='club'),
 
-    url(r'^admin/', include(admin.site.urls)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
