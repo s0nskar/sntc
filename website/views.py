@@ -7,7 +7,7 @@ from .models import *
 
 def home(request):
 	context = {}
-	clubs = Club.objects.exclude(club__slug='sntc')
+	clubs = Club.objects.exclude(slug='sntc')
 	secys = Secy.objects.filter(club__slug='sntc').order_by('order')
 	topics = SubTopic.objects.filter(club__slug='sntc').order_by('order')
 	context['clubs'] = clubs
