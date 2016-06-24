@@ -172,72 +172,20 @@
     </div>
     <!-- carousel ends -->
 
-
-
-
-
     <!-- intro starts -->
     <div class="container marketing">
+      {% for topic in topics %}
       <div class="row featurette">
         <div class="col-md-8 col-md-push-2">
-          <h2 class="featurette-heading">About Us</h2>
-          <p class="lead">Welcome to the homepage of the Science and Technology Council, IIT (BHU) Varanasi! This is the place where all your innovative ideas, which were trapped in the quagmire of pen and paper, are given shape and transformed into reality. Our council houses a plethora of clubs, which are extremely adept at their job. From making robots that battle it out amongst themselves in an arena to making racing cars, we do it all. Read on about our clubs to find out more!</p>
-        </div>
-
-      </div>
- <div class="row featurette">
-        <div class="col-md-8 col-md-push-2">
-          <h2 class="featurette-heading"><a href="hhtp://technex.in">Technex</a></h2>
-          <p class="lead">Every year the Science and Technology Council organises the Techno-Management Fest of IIT (BHU), Varanasi,known far and wide as Technex.<br>The 2016 edition would mark the 77<small>th</small> iteration of the fest.</p>
+          <h2 class="featurette-heading">{{topic.heading}}</h2>
+          <p class="lead">{{topic.about}}</p>
         </div>
       </div>
-
-<div class="row featurette">
-        <div class="col-md-8 col-md-push-2">
-          <h2 class="featurette-heading">Vision Director</h2>
-          <p class="lead">Bla Bla Bla by director</p>
-        </div>
-
-      </div>
-
-      <div class="row featurette">
-        <div class="col-md-8 col-md-push-2">
-          <h2 class="featurette-heading">Vision Dosa</h2>
-          <p class="lead">Dosa ji ke Vichar</p>
-        </div>
-
-      </div>
-
-      <div class="row featurette">
-        <div class="col-md-8 col-md-push-2">
-          <h2 class="featurette-heading">Vision council</h2>
-          <p class="lead">Some more vichars</p>
-        </div>
-
-      </div>
-      <div class="row featurette">
-        <div class="col-md-8 col-md-push-2">
-          <h2 class="featurette-heading">Vision GenSec</h2>
-          <p class="lead">Vision here</p>
-        </div>
-
-      </div>
+      {% endfor %}
+    </div>
 
       <hr class="featurette-divider">
 
-     <div class="row featurette">
-        <div class="col-md-8 col-md-push-2">
-          <h2 class="featurette-heading">Achievements</h2>
-          <ul class="lead">
-          	<li>Achievement 1</li>
-          	<li>Achievement 2</li>
-          	<li>Achievement 3</li>
-          	<li>Achievement 4</li>
-          	<li>Achievement 5</li>
-          </ul>
-        </div>
-
-      </div>
 <div class="row featurette">
 
     <!-- club circles start -->
@@ -264,30 +212,16 @@
     <!-- heads start -->
     <div class="container marketing">
       <div class="row">
+        {% for secy in secys %}
         <div class="col-lg-4  col-lg-push-1">
           <img class="img-circle" src="/static/css/images/green_circle.png" alt="Generic placeholder image" width="140" height="auto">
-          <h2>Utkarsh Kumar</h2>
-          <h4>Post</h4>
-          <p>first.second@iitbhu.ac.in</p>
-          <p>+91-123-456-7890</p>
+          <h2>{{secy.name}}</h2>
+          <h4>{{secy.post}}</h4>
+          <p>{{secy.email}}</p>
+          <p>{{secy.contact}}</p>
           <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" src="/static/css/images/green_circle.png" alt="Generic placeholder image" width="140" height="auto">
-          <h2>Malkhan Thakur</h2>
-          <h4>Post</h4>
-          <p>first.second@iitbhu.ac.in</p>
-          <p>+91-123-456-7890</p>
-          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4 col-lg-pull-1">
-          <img class="img-circle" src="/static/css/images/green_circle.png" alt="Generic placeholder image" width="140" height="auto">
-          <h2>Ishika Sahay</h2>
-          <h4>Post</h4>
-          <p>first.second@iitbhu.ac.in</p>
-          <p>+91-123-456-7890</p>
-          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
-        </div><!-- /.col-lg-4 -->
+        {% endfor %}
       </div><!-- /.row -->
 
     </div>
