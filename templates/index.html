@@ -192,7 +192,9 @@
     <div class="container">
       <div style="widths"></div>
       <h2 class="featurette-heading" style="text-align: center;">Clubs</h2><br>
+      <div class="clubslist">
       {% for club in clubs %}
+          {% if club.slug != 'sntc' %}
           <a href="{{club.slug}}">
             <div class="col-md-3 club_wrapper" id="{{club.slug}}">
               <div class="circle circle-solid circle-outer">
@@ -203,7 +205,9 @@
               <h4><strong>{{club.name}}</strong></h4>
             </div>
           </a>
+          {% endif %}
       {% endfor %}
+    </div>
 
     <!-- club circles end -->
 
@@ -243,5 +247,12 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/static/js/bootstrap.min.js"></script>
     <script src="/static/js/script.js"></script>
+    <script>
+      var divs = $('.clubslist > a');
+      console.log(divs);
+      for(var i = 0; i < divs.length; i+=4) {
+        divs.slice(i, i+4).wrapAll("<div class='row'></div>");
+      }
+    </script>
   </body>
 </html>
