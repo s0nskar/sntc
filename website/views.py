@@ -7,10 +7,12 @@ from .models import *
 
 def home(request):
 	context = {}
-	clubs = Club.objects.all()
-	secys = SubTopic.objects.filter(club__slug='sntc').order_by('order')
+	clubs = Club.objects.exclude(club__slug='sntc')
+	secys = Secy.objects.filter(club__slug='sntc').order_by('order')
+	topics = SubTopic.objects.filter(club__slug='sntc').order_by('order')
 	context['clubs'] = clubs
 	context['secys'] = secys
+	context['topics'] = topics
 	return render(request, 'index.html', context)
 
 def club(request, slug):
